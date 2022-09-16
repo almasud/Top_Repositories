@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/searchFragment">
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.github.almasud.top_repositories.ui.search.SearchFragment"
+        android:label="@string/top_repositories" >
+        <action
+            android:id="@+id/action_searchFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.github.almasud.top_repositories.ui.details.DetailsFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="repoObject"
+            app:argType="com.github.almasud.top_repositories.model.Repo" />
+    </fragment>
+</navigation>

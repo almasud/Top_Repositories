@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.github.almasud.top_repositories.ui.details.DetailsFragment">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/settings_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGray">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circularImageProfile"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/profile_image"
+            app:civ_border_color="@color/colorPrimary"
+            app:civ_border_width="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/activity_half_margin"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="300dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginBottom="-15dp"
+            app:cardElevation="15dp"
+            android:layout_below="@+id/circularImageProfile">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_half_margin"
+                    android:layout_marginBottom="@dimen/activity_half_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/activity_horizontal_margin">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:orientation="vertical"
+                                android:paddingVertical="@dimen/activity_half_margin">
+
+                                <TextView
+                                    android:id="@+id/tvName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingHorizontal="@dimen/activity_half_margin"
+                                    tools:text="Md. Abdullah Almasud"
+                                    android:textSize="22sp"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:id="@+id/tvButtonChat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/repo_owner"
+                                    android:layout_marginTop="@dimen/activity_half_margin"
+                                    android:padding="5dp"
+                                    android:background="@color/colorPrimary"
+                                    android:textColor="@color/colorAccent"
+                                    android:drawablePadding="5dp"
+                                    android:clickable="true"
+                                    android:focusable="true" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_half_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/activity_horizontal_margin">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorTransparent"
+                            android:padding="@dimen/activity_half_margin"
+                            android:text="@string/about_repo"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tvAbout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorTransparent"
+                            android:padding="@dimen/activity_half_margin"
+                            tools:text="Hi, I am Abdullah Almasud."
+                            android:textSize="16sp"
+                            android:textColor="@color/colorGrayDeep" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="@dimen/activity_half_margin">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="@string/last_updated"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:padding="@dimen/activity_half_margin" />
+
+                            <TextView
+                                android:id="@+id/tvDate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:layout_marginStart="@dimen/activity_half_margin"
+                                android:padding="@dimen/activity_half_margin"
+                                tools:text="Male"
+                                android:textSize="16sp"
+                                android:textColor="@color/colorGrayDeep"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</ScrollView>
+
+</RelativeLayout>
