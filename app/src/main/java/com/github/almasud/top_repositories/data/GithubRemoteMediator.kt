@@ -7,7 +7,6 @@ import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import androidx.room.withTransaction
 import com.github.almasud.top_repositories.api.GithubService
-import com.github.almasud.top_repositories.api.IN_QUALIFIER
 import com.github.almasud.top_repositories.db.RemoteKeys
 import com.github.almasud.top_repositories.db.RepoDatabase
 import com.github.almasud.top_repositories.model.Repo
@@ -66,7 +65,8 @@ class GithubRemoteMediator(
             }
         }
 
-        val apiQuery = query + IN_QUALIFIER
+//        val apiQuery = query + IN_QUALIFIER
+        val apiQuery = query
         Log.i(TAG, "load: apiQuery: $apiQuery")
 
         try {
